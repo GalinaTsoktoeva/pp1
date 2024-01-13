@@ -6,7 +6,9 @@ import jm.task.core.jdbc.service.UserServiceImpl;
 
 import java.sql.SQLException;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -28,7 +30,7 @@ public class Main {
         final byte testAge4 = 95;
 
         UserService userService = new UserServiceImpl();
-        userService.createUsersTable();
+//        userService.createUsersTable();
 
         userService.saveUser(testName1, testLastName1, testAge1);
         userService.saveUser(testName2, testLastName2, testAge2);
@@ -37,9 +39,9 @@ public class Main {
 
         List<User> usersSelect = userService.getAllUsers();
         System.out.println(usersSelect);
-//        userService.removeUserById(101);
+        userService.removeUserById(1);
         userService.cleanUsersTable();
-        userService.dropUsersTable();
+//        userService.removeUserById(1);
 
     }
 }
