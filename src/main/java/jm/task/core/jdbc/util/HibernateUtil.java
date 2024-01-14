@@ -19,7 +19,7 @@ public class HibernateUtil {
             prop.setProperty("hibernate.connection.password", "12345");
             prop.setProperty("dialect", "org.hibernate.dialect.PostgreSQL10Dialect");
             prop.setProperty("hibernate.show_sql", "true");
-            prop.setProperty("hibernate.hbm2ddl.auto", "create");
+//            prop.setProperty("hibernate.hbm2ddl.auto", "create");
 
             concreteSessionFactory = new Configuration()
                     .addProperties(prop)

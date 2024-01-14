@@ -30,7 +30,7 @@ public class Main {
         final byte testAge4 = 95;
 
         UserService userService = new UserServiceImpl();
-//        userService.createUsersTable();
+        userService.createUsersTable();
 
         userService.saveUser(testName1, testLastName1, testAge1);
         userService.saveUser(testName2, testLastName2, testAge2);
